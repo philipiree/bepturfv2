@@ -25,9 +25,11 @@ Route::get('/', function () {
 
 Route::group(['middleware' => ['auth','admin']], function () {
 
-    Route::get('/dashboard', function () {
-    return view('admin.dashboard');
-    });
+    // Route::get('/dashboard', function () {
+    // return view('admin.dashboard');
+    // });
+
+    Route::get('/dashboard', 'DashboardController@index');
 
     //registered users & role assignments
     Route::get('/role-register', 'Admin\DashboardController@registered');

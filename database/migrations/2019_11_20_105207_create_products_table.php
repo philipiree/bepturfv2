@@ -19,7 +19,7 @@ class CreateProductsTable extends Migration
             $table->string('flavor');
             $table->string('maker');
             $table->mediumText('description');
-            $table->string('price');
+            $table->decimal('price',15,2)->nullable();
             $table->string('size');
             $table->string('strength');
             $table->string('quantity');

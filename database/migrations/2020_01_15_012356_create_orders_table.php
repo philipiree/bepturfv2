@@ -30,8 +30,8 @@ class CreateOrdersTable extends Migration
             $table->string('billing_province');
             $table->integer('billing_zip');
             $table->string('billing_phone');
-            $table->string('billing_subtotal');
-            $table->string('billing_total');
+            $table->string('billing_subtotal',15,2)->nullable();
+            $table->string('billing_total',15,2)->nullable();
             $table->string('payment_gateway')->default('COD');
             $table->string('status')->default('pending');
             $table->string('error')->nullable();

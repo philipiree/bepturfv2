@@ -16,10 +16,10 @@
           <span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
 
           <div class="info-box-content">
-            <span class="info-box-text">CPU Traffic</span>
+            <span class="info-box-text">Products Sold</span>
             <span class="info-box-number">
-              10
-              <small>%</small>
+              {{ $totals }}
+              <small>Products</small>
             </span>
           </div>
           <!-- /.info-box-content -->
@@ -32,8 +32,8 @@
           <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
 
           <div class="info-box-content">
-            <span class="info-box-text">Likes</span>
-            <span class="info-box-number">41,410</span>
+            <span class="info-box-text">Orders</span>
+          <span class="info-box-number">{{$orders->count()}}</span>
           </div>
           <!-- /.info-box-content -->
         </div>
@@ -49,8 +49,8 @@
           <span class="info-box-icon bg-success elevation-1"><i class="fas fa-shopping-cart"></i></span>
 
           <div class="info-box-content">
-            <span class="info-box-text">Sales</span>
-            <span class="info-box-number">760</span>
+            <span class="info-box-text">Today's Sales</span>
+          <span class="info-box-number">₱ {{ $expensesTotal }}</span>
           </div>
           <!-- /.info-box-content -->
         </div>
@@ -62,8 +62,8 @@
           <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
 
           <div class="info-box-content">
-            <span class="info-box-text">New Members</span>
-            <span class="info-box-number">2,000</span>
+            <span class="info-box-text">Users</span>
+            <span class="info-box-number">{{ $users->count() }}</span>
           </div>
           <!-- /.info-box-content -->
         </div>
@@ -121,7 +121,7 @@
                 </p>
 
                 <div class="progress-group">
-                  Add Products to Cart
+                  Products in Process
                   <span class="float-right"><b>160</b>/200</span>
                   <div class="progress progress-sm">
                     <div class="progress-bar bg-primary" style="width: 80%"></div>
@@ -130,7 +130,7 @@
                 <!-- /.progress-group -->
 
                 <div class="progress-group">
-                  Complete Purchase
+                  Delivered Orders
                   <span class="float-right"><b>310</b>/400</span>
                   <div class="progress progress-sm">
                     <div class="progress-bar bg-danger" style="width: 75%"></div>
@@ -139,7 +139,7 @@
 
                 <!-- /.progress-group -->
                 <div class="progress-group">
-                  <span class="progress-text">Visit Premium Page</span>
+                  <span class="progress-text">Shipped Products</span>
                   <span class="float-right"><b>480</b>/800</span>
                   <div class="progress progress-sm">
                     <div class="progress-bar bg-success" style="width: 60%"></div>
@@ -148,7 +148,7 @@
 
                 <!-- /.progress-group -->
                 <div class="progress-group">
-                  Send Inquiries
+                  Pending Orders
                   <span class="float-right"><b>250</b>/500</span>
                   <div class="progress progress-sm">
                     <div class="progress-bar bg-warning" style="width: 50%"></div>

@@ -112,6 +112,7 @@ class CheckoutController extends Controller
         $order->billing_province = $request->input('province');
         $order->billing_zip = $request->input('zip');
         $order->billing_phone = $request->input('phone');
+
         $order->billing_subtotal =  str_replace(',','',Cart::subtotal());
         $order->billing_total =   str_replace(',','',Cart::total());
 

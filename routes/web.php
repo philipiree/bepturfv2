@@ -94,3 +94,6 @@ Route::group(['middleware' => ['auth','admin']], function () {
         Cart::destroy();
     });*/
 
+    Route::get('/events', 'BlogsController@index')->name('blogs.index');
+    Route::get('/events/{id}', 'BlogsController@show')->name('blogs.show');
+

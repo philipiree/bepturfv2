@@ -23,6 +23,7 @@
                         <tr>
                             <th class="text-center">Id</th>
                             <th>Name</th>
+                            <th>Photo</th>
                             <th>Date</th>
                             <th>Edit</th>
                             <th>Delete</th>
@@ -35,6 +36,14 @@
                     @foreach ($products as $product)
                     <tr>
                         <td>{{ $product->id }}</td>
+                        <td>
+                            <div class="p-2">
+                                <img src="/storage/display_images/{{ $product->display_image }}" alt="" width="40" class="img-fluid rounded shadow-sm">
+                                {{-- <a href="{{ route('pages.display', $item->id) }}"><img src="{{ asset('/storage/display_images'.$item->display_image) }}" alt=""></a> --}}
+
+                              </div>
+
+                        </td>
                         <td>
                             <a href={{ route('pages.display', $product->id) }}> {{ $product->name }}</a>
                         </td>

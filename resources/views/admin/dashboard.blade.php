@@ -236,66 +236,26 @@
             <!-- /.card-header -->
             <div class="card-body p-0">
               <ul class="products-list product-list-in-card pl-2 pr-2">
+                @foreach ($products as $product)
                 <li class="item">
                   <div class="product-img">
-                    <img src="dist/img/default-150x150.png" alt="Product Image" class="img-size-50">
+                    <img src="/storage/display_images/{{ $product->display_image }}" alt="" width="40" class="img-fluid rounded shadow-sm">
                   </div>
                   <div class="product-info">
-                    <a href="javascript:void(0)" class="product-title">Samsung TV
-                      <span class="badge badge-warning float-right">$1800</span></a>
+                    <a href="javascript:void(0)" class="product-title">{{ $product->name }}
+                    <span class="badge badge-warning float-right">{{ $product->price}}</span></a>
                     <span class="product-description">
-                      Samsung 32" 1080p 60Hz LED Smart HDTV.
+                     {{ $product->description }}
                     </span>
                   </div>
                 </li>
-                <!-- /.item -->
-                <li class="item">
-                  <div class="product-img">
-                    <img src="dist/img/default-150x150.png" alt="Product Image" class="img-size-50">
-                  </div>
-                  <div class="product-info">
-                    <a href="javascript:void(0)" class="product-title">Bicycle
-                      <span class="badge badge-info float-right">$700</span></a>
-                    <span class="product-description">
-                      26" Mongoose Dolomite Men's 7-speed, Navy Blue.
-                    </span>
-                  </div>
-                </li>
-                <!-- /.item -->
-                <li class="item">
-                  <div class="product-img">
-                    <img src="dist/img/default-150x150.png" alt="Product Image" class="img-size-50">
-                  </div>
-                  <div class="product-info">
-                    <a href="javascript:void(0)" class="product-title">
-                      Xbox One <span class="badge badge-danger float-right">
-                      $350
-                    </span>
-                    </a>
-                    <span class="product-description">
-                      Xbox One Console Bundle with Halo Master Chief Collection.
-                    </span>
-                  </div>
-                </li>
-                <!-- /.item -->
-                <li class="item">
-                  <div class="product-img">
-                    <img src="dist/img/default-150x150.png" alt="Product Image" class="img-size-50">
-                  </div>
-                  <div class="product-info">
-                    <a href="javascript:void(0)" class="product-title">PlayStation 4
-                      <span class="badge badge-success float-right">$399</span></a>
-                    <span class="product-description">
-                      PlayStation 4 500GB Console (PS4)
-                    </span>
-                  </div>
-                </li>
+                @endforeach
                 <!-- /.item -->
               </ul>
             </div>
             <!-- /.card-body -->
             <div class="card-footer text-center">
-              <a href="javascript:void(0)" class="uppercase">View All Products</a>
+              <a href="/listedproducts" class="uppercase">View All Products</a>
             </div>
             <!-- /.card-footer -->
           </div>

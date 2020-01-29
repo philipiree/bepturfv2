@@ -21,7 +21,7 @@
   <script src="https://kit.fontawesome.com/81abfe277e.js" crossorigin="anonymous"></script>
   <!-- Custom styles for this template -->
   <link href="css/shop-homepage.css" rel="stylesheet">
-  @yield('styles')
+
 </head>
 
 <body>
@@ -119,11 +119,6 @@
                 </div>
             </li>
         @endguest
-
-
-
-
-
           </li>
         </ul>
       </div>
@@ -147,8 +142,6 @@
         <!-- /.container -->
     </footer>
    </div>
-
-
   <!-- Bootstrap core JavaScript -->
 
   @include('sweetalert::alert')

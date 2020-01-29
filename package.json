@@ -25,6 +25,8 @@
     "dependencies": {
         "@ckeditor/ckeditor5-build-classic": "^15.0.0",
         "admin-lte": "^3.0.2",
+        "ckeditor4": "^4.13.1",
+        "summernote": "^0.8.15",
         "sweetalert": "^2.1.2"
     }
 }

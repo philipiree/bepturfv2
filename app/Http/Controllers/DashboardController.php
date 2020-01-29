@@ -20,10 +20,11 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        $products = Product::all();
+        $products = Product::all()->take(5);
         $orders = Order::all();
         $expenses = Order::all();
         $order = Order::all();
+
 
 
 

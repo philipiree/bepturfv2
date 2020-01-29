@@ -33,7 +33,7 @@
                                 </div>
                                 <div class="form-group">
                                     {{ Form::label('description', 'Description') }}
-                                    {{ Form::textarea('description', '', ['id' => 'editor', 'class'=> 'form-control']) }}
+                                    {{ Form::textarea('description', '', ['id' => 'editor1', 'class'=> 'form-control']) }}
                                 </div>
                                 <div class="form-group">
                                     {{ Form::label('category', 'Category') }}

@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use DB;
+use App\Blog;
 use App\User;
 use App\Order;
+use App\Contact;
 use App\Expense;
 use App\Product;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
-use DB;
 
 
 class DashboardController extends Controller
@@ -20,13 +22,13 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        $products = Product::all()->take(5);
+
+        $products = Product::orderBy('created_at', 'desc')->paginate(5);
         $orders = Order::all();
         $expenses = Order::all();
         $order = Order::all();
-
-
-
+        $blogs = Blog::orderBy('created_at', 'desc')->paginate(5);
+        $contacts = Contact::orderBy('created_at', 'desc')->paginate(5);
 
         $users = User::all();
         // $from = Carbon::now()->month;
@@ -36,27 +38,22 @@ class DashboardController extends Controller
             Carbon::today(),
 
         ));
-
-        $to      = clone $from;
+        $to = clone $from;
         $to->day = $to->daysInMonth;
 
         $expenses = Order::whereBetween('created_at', [$from, $to]);
-
-        $expensesTotal   = number_format($expenses->sum('billing_total'),2);
-
+        $expensesTotal = number_format($expenses->sum('billing_total'),2);
         $totals = DB::table('order_product')->sum('quantity');
 
-
-
-
-
-        return view('admin.dashboard')->with([
+        return view('admin.dashboard.dashboard')->with([
             'products' => $products,
             'orders'=>$orders,
             'expenses'=>$expenses,
             'expensesTotal' => $expensesTotal,
             'users' => $users,
             'totals' => $totals,
+            'blogs' => $blogs,
+            'contacts' => $contacts,
             ]);
     }
 

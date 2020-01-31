@@ -5,7 +5,8 @@
 @endsection
 
 @section('styles')
-<link href="css/shop-homepage.css" rel="stylesheet">
+
+<link href="{{ asset('css/shop-homepage.css') }}" rel="stylesheet">
 @endsection
 
 @section('content')
@@ -71,7 +72,7 @@
         <div class="row">
         @forelse ($products as $product)
             <div class="col-lg-3 col-md-6 mb-3">
-            <div class="card h-100">
+            <div class="shadow card h-100">
               <a href="/collections/{{ $product->id }}"><img class="card-img-top" src="/storage/display_images/{{ $product->display_image }}" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">

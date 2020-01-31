@@ -9,8 +9,10 @@
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
   <link href="{{ asset('dist/css/adminlte.min.css') }}" rel="stylesheet">
   <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
+
   <link href="{{ asset('plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}" rel="stylesheet">
   <link href="{{ asset('plugins/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css" />
@@ -243,6 +245,18 @@
               <p>Expenses</p>
             </a>
           </li>
+          <li class="nav-item {{ 'posts' == request()->path() ? 'active' : '' }}">
+            <a href="/posts" class="nav-link">
+            <i class="fa-fw fas fa-arrow-circle-right nav-icon"></i>
+              <p>Blogs</p>
+            </a>
+          </li>
+          <li class="nav-item {{ 'messages' == request()->path() ? 'active' : '' }}">
+            <a href="/messages" class="nav-link">
+            <i class="fa-fw fas fa-arrow-circle-right nav-icon"></i>
+              <p>Messages</p>
+            </a>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -299,6 +313,8 @@
     // Replace the <textarea id="editor1"> with a CKEditor
     // instance, using default configuration.
     CKEDITOR.replace( 'editor1' );
+    CKEDITOR.config.enterMode = CKEDITOR.ENTER_BR;
+    CKEDITOR.config.forcePasteAsPlainText = true;
 </script>
 </body>
 </html>

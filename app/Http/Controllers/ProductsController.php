@@ -20,7 +20,7 @@ class ProductsController extends Controller
         //$products = Product::all();
         //$products = Product::orderBy('created_at','desc')->get();
         $products = Product::orderBy('created_at','desc')->paginate(10);
-        return view('admin.productsview')->with('products', $products);
+        return view('admin.products.productsview')->with('products', $products);
     }
 
     /**
@@ -34,7 +34,7 @@ class ProductsController extends Controller
 
         //$select = Category::pluck('name', 'id');
 
-        return view('admin.createproduct')->with('category', $categories);
+        return view('admin.products.createproduct')->with('category', $categories);
 
 
     }
@@ -101,13 +101,10 @@ class ProductsController extends Controller
         $product->save();
 
         $product->categories()->sync([$tag_ids]);
-
-
-
-        return redirect('/listedproducts')->with('success', 'Product Created');
-
-
+        alert()->success('Done!','Successfully Created a Product');
+        return redirect('/listedproducts');
     }
+
     public function viewer()
     {
 
@@ -184,7 +181,7 @@ class ProductsController extends Controller
         foreach ($categories as $category) {
            $select[$category->id] = $category->name;
         }
-        return view('admin.editproduct')->with('product', $products)->withCategories($select);
+        return view('admin.products.editproduct')->with('product', $products)->withCategories($select);
     }
 
     /**

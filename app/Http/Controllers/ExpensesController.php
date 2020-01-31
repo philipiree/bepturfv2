@@ -17,7 +17,7 @@ class ExpensesController extends Controller
         $expenses = Expense::take(12);
         $expenses = $expenses->paginate(8);
 
-        return view('admin.expenses', compact('expenses'));
+        return view('admin.expenses.expenses', compact('expenses'));
     }
 
     /**
@@ -29,7 +29,7 @@ class ExpensesController extends Controller
     {
         $expenses = Expense::all();
 
-        return view('admin.create-expense', compact('expenses'));
+        return view('admin.expenses.create-expense', compact('expenses'));
     }
 
     /**
@@ -69,7 +69,7 @@ class ExpensesController extends Controller
         $expenses = Expense::find($id);
 
 
-        return view('admin.show-expenses')->with('expense', $expenses);
+        return view('admin.expenses.show-expenses')->with('expense', $expenses);
     }
 
     /**
@@ -82,7 +82,7 @@ class ExpensesController extends Controller
     {
         $expenses = Expense::find($id);
 
-        return view('admin.edit-expenses')->with('expense', $expenses);
+        return view('admin.expenses.edit-expenses')->with('expense', $expenses);
     }
 
     /**

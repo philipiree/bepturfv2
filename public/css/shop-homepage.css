@@ -40,4 +40,18 @@ a, a:hover {
     color: orangered;
 }
 
+.btn{
+    background-color:orange;
+    border: none;
+    border-radius: 2px;
+    color: white;
+}
+
+.links{
+    margin-left: 8em;
+}
+
+
+
+
 

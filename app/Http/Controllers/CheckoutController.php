@@ -92,7 +92,7 @@ class CheckoutController extends Controller
             'city' => 'required',
             'province' => 'required',
             'zip' => 'required|digits:4',
-            'phone' => 'required|',
+            'phone' => 'required|max:11',
         ]);
 
         $contents = Cart::content()->map(function($item){
@@ -136,7 +136,8 @@ class CheckoutController extends Controller
         $this->decreaseQty();
         //SUCCESSFUL ORDER
         Cart::instance('default')->destroy();
-
+        alert()->success('Thank You!','Your order is complete!');
+        return redirect()->route('pages.collections');
     }
 
     /**
@@ -226,8 +227,6 @@ class CheckoutController extends Controller
         }else{
             $products = $products->paginate(8);
         }
-
-
 
         $query = $request->input('query');
 

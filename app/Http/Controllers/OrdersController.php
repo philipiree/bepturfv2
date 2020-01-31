@@ -15,7 +15,7 @@ class OrdersController extends Controller
     public function index()
     {
         $orders = Order::orderBy('created_at','desc')->paginate(10);
-        return view('admin.orders')->with('orders', $orders);
+        return view('admin.orders.orders')->with('orders', $orders);
     }
 
     /**
@@ -59,7 +59,7 @@ class OrdersController extends Controller
     public function edit($id)
     {
         $orders = Orders::find($id);
-        return view('admin.editorders')->with('orders', $orders);
+        return view('admin.orders.editorders')->with('orders', $orders);
     }
 
     /**

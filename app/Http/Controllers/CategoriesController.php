@@ -20,7 +20,7 @@ class CategoriesController extends Controller
         $categories = Category::take(12);
         $categories = $categories->paginate(8);
 
-        return view('admin.categories')->with('categories', $categories);
+        return view('admin.categories.categories')->with('categories', $categories);
     }
 
     /**
@@ -34,7 +34,7 @@ class CategoriesController extends Controller
 
         //$select = Category::pluck('name', 'id');
 
-        return view('admin.createcategory')->with('category', $categories);
+        return view('admin.categories.createcategory')->with('category', $categories);
     }
 
     /**
@@ -77,7 +77,7 @@ class CategoriesController extends Controller
     {
         $categories = Category::findOrFail($id);
 
-        return view('admin.editcategories')->with('categories',$categories);
+        return view('admin..categories.editcategories')->with('categories',$categories);
     }
 
     /**

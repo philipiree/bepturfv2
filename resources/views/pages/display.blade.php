@@ -83,8 +83,11 @@
                         <input type="hidden" name="strength" value="{{ $product->strength }}">
                         <input type="hidden" name="size" value="{{ $product->size }}">
 
-                        <button type="submit" class="btn btn-cart">ADD TO CART</button>
-                        </form>
+                        @if($product->quantity > 0)
+                        <button type="submit" class="btn btn-cart2">ADD TO CART</button>
+                        @else
+                        <button type="submit" class="btn btn-cart2" disabled>ADD TO CART</button>
+                        @endif
                     </div>
 
 

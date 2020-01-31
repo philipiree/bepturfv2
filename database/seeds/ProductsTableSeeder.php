@@ -22,6 +22,7 @@ class ProductsTableSeeder extends Seeder
             'strength' => '12MG',
             'quantity' => '100',
             'display_image' => 'bigmelons.png',
+            'created_at' => now(),
             ]);
 
         Product::create([
@@ -34,6 +35,7 @@ class ProductsTableSeeder extends Seeder
             'strength' => '12MG',
             'quantity' => '100',
             'display_image' => 'blacklabel.png',
+            'created_at' => now(),
             ]);
         Product::create([
             'name' => 'Blizzard',
@@ -45,6 +47,7 @@ class ProductsTableSeeder extends Seeder
             'strength' => '12MG',
             'quantity' => '100',
             'display_image' => 'blizzard.png',
+            'created_at' => now(),
             ]);
 
         Product::create([
@@ -57,6 +60,7 @@ class ProductsTableSeeder extends Seeder
             'strength' => '12MG',
             'quantity' => '100',
             'display_image' => 'blueleaf.png',
+            'created_at' => now(),
             ]);
         Product::create([
             'name' => 'Breakfast in Bed',
@@ -68,6 +72,7 @@ class ProductsTableSeeder extends Seeder
             'strength' => '12MG',
             'quantity' => '100',
             'display_image' => 'breakfastinbed.png',
+            'created_at' => now(),
             ]);
         Product::create([
             'name' => 'Candy Craze',
@@ -79,6 +84,7 @@ class ProductsTableSeeder extends Seeder
             'strength' => '12MG',
             'quantity' => '100',
             'display_image' => 'candycraze.png',
+            'created_at' => now(),
             ]);
 
         Product::create([
@@ -91,6 +97,7 @@ class ProductsTableSeeder extends Seeder
             'strength' => '12MG',
             'quantity' => '100',
             'display_image' => 'chichi.png',
+            'created_at' => now(),
             ]);
         Product::create([
             'name' => 'Concubine',
@@ -102,6 +109,7 @@ class ProductsTableSeeder extends Seeder
             'strength' => '12MG',
             'quantity' => '100',
             'display_image' => 'concubine.png',
+            'created_at' => now(),
             ]);
 
         Product::create([
@@ -114,6 +122,7 @@ class ProductsTableSeeder extends Seeder
             'strength' => '12MG',
             'quantity' => '100',
             'display_image' => 'dvine.png',
+            'created_at' => now(),
             ]);
         Product::create([
             'name' => 'Green Label',
@@ -125,6 +134,7 @@ class ProductsTableSeeder extends Seeder
             'strength' => '12MG',
             'quantity' => '100',
             'display_image' => 'greenlabel.png',
+            'created_at' => now(),
             ]);
         Product::create([
             'name' => 'Kiwiki',
@@ -136,6 +146,7 @@ class ProductsTableSeeder extends Seeder
             'strength' => '12MG',
             'quantity' => '100',
             'display_image' => 'kiwiki.png',
+            'created_at' => now(),
             ]);
 
         Product::create([
@@ -148,6 +159,7 @@ class ProductsTableSeeder extends Seeder
             'strength' => '12MG',
             'quantity' => '100',
             'display_image' => 'lychee.png',
+            'created_at' => now(),
             ]);
         Product::create([
             'name' => 'Mango Tango',
@@ -159,6 +171,7 @@ class ProductsTableSeeder extends Seeder
             'strength' => '12MG',
             'quantity' => '100',
             'display_image' => 'mangotango.png',
+            'created_at' => now(),
             ]);
 
         Product::create([
@@ -171,6 +184,7 @@ class ProductsTableSeeder extends Seeder
             'strength' => '12MG',
             'quantity' => '100',
             'display_image' => 'morningwood.png',
+            'created_at' => now(),
             ]);
         Product::create([
             'name' => 'Peaches',
@@ -182,6 +196,7 @@ class ProductsTableSeeder extends Seeder
             'strength' => '12MG',
             'quantity' => '100',
             'display_image' => 'peaches.png',
+            'created_at' => now(),
             ]);
         Product::create([
             'name' => 'Grand Master',
@@ -193,6 +208,7 @@ class ProductsTableSeeder extends Seeder
             'strength' => '12MG',
             'quantity' => '100',
             'display_image' => 'bigmelons.png',
+            'created_at' => now(),
 
             ]);
 
@@ -206,6 +222,7 @@ class ProductsTableSeeder extends Seeder
             'strength' => '12MG',
             'quantity' => '100',
             'display_image' => 'blacklabel.png',
+            'created_at' => now(),
             ]);
         Product::create([
             'name' => 'Havoc',
@@ -217,6 +234,7 @@ class ProductsTableSeeder extends Seeder
             'strength' => '12MG',
             'quantity' => '100',
             'display_image' => 'blizzard.png',
+            'created_at' => now(),
             ]);
 
         Product::create([
@@ -229,6 +247,7 @@ class ProductsTableSeeder extends Seeder
             'strength' => '12MG',
             'quantity' => '100',
             'display_image' => 'blueleaf.png',
+            'created_at' => now(),
             ]);
         Product::create([
             'name' => 'Yummy Gummy',
@@ -240,6 +259,7 @@ class ProductsTableSeeder extends Seeder
             'strength' => '12MG',
             'quantity' => '100',
             'display_image' => 'breakfastinbed.png',
+            'created_at' => now(),
             ]);
 
 

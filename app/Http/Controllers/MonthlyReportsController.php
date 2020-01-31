@@ -48,7 +48,7 @@ class MonthlyReportsController extends Controller
                 $expensesSummary[$exp->name]['amount'] += $exp->amount;
         }
 
-        return view('admin.monthly-report', compact(
+        return view('admin.expreports.monthly-report', compact(
             'expensesSummary',
             'expensesTotal',
             'profit'

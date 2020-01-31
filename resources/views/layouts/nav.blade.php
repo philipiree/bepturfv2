@@ -21,6 +21,8 @@
   <script src="https://kit.fontawesome.com/81abfe277e.js" crossorigin="anonymous"></script>
   <!-- Custom styles for this template -->
   <link href="css/shop-homepage.css" rel="stylesheet">
+    @yield('styles')
+
 
 </head>
 
@@ -29,7 +31,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-      <a class="navbar-brand" href="/home">Vape Turf</a>
+      <a class="navbar-brand" href="/">Vape Turf</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -52,13 +54,13 @@
             </div>
         </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About Us</a>
+            <a class="nav-link" href="/events">Events</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
+            <a class="nav-link" href="/services">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="/contact-us">Contact</a>
           </li>
         </ul>
         <ul class="navbar-nav ml-auto">
@@ -131,19 +133,31 @@
     @yield('content')
 
   </div>
-  <!-- /.container -->
-
-  <!-- Footer -->
  <div style="padding:0px;"class="col-lg-12">
     <footer class="p-5 bg-dark">
-        <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; VapeTurf 2019</p>
-        </div>
-        <!-- /.container -->
+        <div class="row ">
+            <div class="col-md-4">
+                <div class="col-sm links">
+                    <a href="/terms-of-service">Terms & Service</a>
+                    <br>
+                   <a href="/terms-services">Contact Us</a>
+                   <br>
+                    <a href="/terms-services">About Us</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <p class="m-0 text-center text-white">Copyright &copy; VapeTurf 2019</p>
+            </div>
+            <div class="col-md-4 links2">
+                <div class="col-sm inline">
+                    <p class="m-0 text-center text-white">Store Location:</p>
+                    <p class="m-0 text-center text-white">Tres de Abril, Labangon, Cebu City</p>
+                    <p class="m-0 text-center text-white">In front of Marianne Childhood Education Center Inc.</p>
+                </div>
+            </div>
+         </div>
     </footer>
    </div>
-  <!-- Bootstrap core JavaScript -->
-
   @include('sweetalert::alert')
 
 </body>

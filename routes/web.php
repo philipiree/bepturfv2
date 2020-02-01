@@ -31,6 +31,7 @@ Route::group(['middleware' => ['auth','admin']], function () {
 
     Route::get('/dashboard', 'DashboardController@index');
 
+
     //registered users & role assignments
     Route::get('/role-register', 'Admin\DashboardController@registered');
     Route::get('/role-edit/{id}','Admin\DashboardController@edit');

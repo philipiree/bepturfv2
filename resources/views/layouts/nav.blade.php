@@ -37,9 +37,8 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav mx-auto">
-          <li class="nav-item active">
+          <li class="nav-item {{ 'home' == request()->path() ? 'active' : '' }}">
             <a class="nav-link" href="/home">Home
-              <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item dropdown">
@@ -53,13 +52,13 @@
                 @endforeach
             </div>
         </li>
-          <li class="nav-item">
+          <li class="nav-item {{ 'events' == request()->path() ? 'active' : '' }}">
             <a class="nav-link" href="/events">Events</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item {{ 'services' == request()->path() ? 'active' : '' }}">
             <a class="nav-link" href="/services">Services</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item {{ 'contact-us' == request()->path() ? 'active' : '' }}">
             <a class="nav-link" href="/contact-us">Contact</a>
           </li>
         </ul>

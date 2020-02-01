@@ -30,15 +30,12 @@
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
+      <li style="padding-top: 7px;" class="nav-item d-none d-sm-inline-block inline text-center">
+        <h5>Vape Turf Dashboard</h5>
       </li>
     </ul>
 
-    <!-- SEARCH FORM -->
+    {{-- <!-- SEARCH FORM -->
     <form class="form-inline ml-3">
       <div class="input-group input-group-sm">
         <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
@@ -48,7 +45,7 @@
           </button>
         </div>
       </div>
-    </form>
+    </form> --}}
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
@@ -309,6 +306,10 @@
 <!-- PAGE SCRIPTS -->
 <script src="dist/js/pages/dashboard2.js"></script>
 @yield('scripts')
+
+ <!-- Chart SCRIPTS -->
+<script src="{{ $salesChart->cdn() }}"></script>
+        {!! $salesChart->script() !!}
 <script>
     // Replace the <textarea id="editor1"> with a CKEditor
     // instance, using default configuration.

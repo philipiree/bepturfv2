@@ -111,32 +111,32 @@
               </div>
               <div class="col-md-4">
                 <p class="text-center">
-                  <strong>Goal Completion</strong>
+                  <strong>Orders Status</strong>
                 </p>
                 <div class="progress-group">
                   Orders in Proccess
-                  <span class="float-right"><b>{{ DB::table('orders')->where('status', 'processing')->count()}}</b>/200</span>
+                  <span class="float-right"><b>{{ DB::table('orders')->where('status', 'processing')->count()}}</b>/100</span>
                   <div class="progress progress-sm">
                     <div class="progress-bar bg-primary" style="width: {{ DB::table('orders')->where('status', 'processing')->count()}}%"></div>
                   </div>
                 </div>
                 <div class="progress-group">
                   Delivered Orders
-                  <span class="float-right"><b>{{ DB::table('orders')->where('status', 'delivered')->count()}}</b>/400</span>
+                  <span class="float-right"><b>{{ DB::table('orders')->where('status', 'delivered')->count()}}</b>/100</span>
                   <div class="progress progress-sm">
                     <div class="progress-bar bg-danger" style="width: {{ DB::table('orders')->where('status', 'delivered')->count()}}%"></div>
                   </div>
                 </div>
                 <div class="progress-group">
                   <span class="progress-text">Shipped Orders</span>
-                  <span class="float-right"><b>{{ DB::table('orders')->where('status', 'shipped')->count()}}</b>/800</span>
+                  <span class="float-right"><b>{{ DB::table('orders')->where('status', 'shipped')->count()}}</b>/100</span>
                   <div class="progress progress-sm">
                     <div class="progress-bar bg-success" style="width: {{ DB::table('orders')->where('status', 'shipped')->count()}}%"></div>
                   </div>
                 </div>
                 <div class="progress-group">
                   Pending Orders
-                <span class="float-right"><b>{{ DB::table('orders')->where('status', 'pending')->count()}}</b>/500</span>
+                <span class="float-right"><b>{{ DB::table('orders')->where('status', 'pending')->count()}}</b>/100</span>
                   <div class="progress progress-sm">
                     <div class="progress-bar bg-warning" style="width: {{ DB::table('orders')->where('status', 'pending')->count()}}%"></div>
                   </div>

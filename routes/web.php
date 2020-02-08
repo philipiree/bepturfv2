@@ -73,9 +73,9 @@ Route::group(['middleware' => ['auth','admin']], function () {
     Route::get('/posts-create', 'BlogsController@create')->name('blog.create');
     Route::delete('/posts-delete/{id}','BlogsController@destroy')->name('post.destroy');
 
-    Route::get('/messages', 'ContactUsController@index');
-    Route::delete('/messages/{id}','ContactUsController@destroy')->name('message.destroy');
-    Route::get('/messages/{id}', 'ContactUsController@show');
+    Route::get('/inqueries', 'ContactUsController@index');
+    Route::delete('/inqueries/{id}','ContactUsController@destroy')->name('message.destroy');
+    Route::get('/inqueries/{id}', 'ContactUsController@show');
 
     });
 

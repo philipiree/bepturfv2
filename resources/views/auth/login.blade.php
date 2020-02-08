@@ -5,8 +5,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <div class="card">
-                <div class="card-header text-center">{{ __('Login') }}</div>
+                <div class="card-header text-center"><h3>{{ __('LOGIN') }}</h3></div>
 
                 <div class="card-body">
 
@@ -30,15 +29,20 @@
                                 </span>
                             @enderror
                         </div>
-                        <div class="form-group form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                        </div>
-                        <button type="submit" class="btn btn-block btn-secondary">
+                        <button type="submit" style="margin-top: 20px;" class="btn btn-block">
                             {{ __('Login') }}
                         </button>
+                        <div class="form-group row mb-0">
+                            <div class="col-md-8 offset-md-4" style="margin-top:10px;">
+                                @if (Route::has('password.request'))
+                                    <a class="" href="{{ route('password.request') }}">
+                                        {{ __('Forgot Your Password?') }}
+                                    </a>
+                                @endif
+                            </div>
+                        </div>
                       </form>
-                        <div style="margin-top: 20px;" class="form-group row mb-0">
+                        <div style="margin-top: 0px; margin-left: 30px;" class="form-group row mb-0">
                             <div class="col-md-8 offset-md-5">
                                 <a class="text-center" href="{{ route('register') }}">
                                     {{ __('Create acount') }}
@@ -47,7 +51,7 @@
                         </div>
                     </form>
                 </div>
-            </div>
+
         </div>
     </div>
 </div>

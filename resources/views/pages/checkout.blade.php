@@ -97,7 +97,7 @@
             </div> --}}
 
             <div class="mb-3">
-              <label for="email">Email <span class="text-muted">(Optional)</span></label>
+              <label for="email">Email</label>
               <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com">
               <div class="invalid-feedback">
                 Please enter a valid email address for shipping updates.
@@ -149,7 +149,15 @@
                             Please provide your Phone Number.
                         </div>
                   </div>
+                  <div class="col-md-12">
+                    <div class="bg-light rounded-pill text-uppercase">
+                        <label for="instructions">Instructions for delivery</label>
+                    </div>
+                      <p class="font-italic mb-4">If you have some information for the seller you can leave them in the box below</p>
+                      <textarea name="instructions" cols="30" rows="2" class="form-control"></textarea>
+                  </div>
             </div>
+
 
             {{-- <div class="custom-control custom-checkbox">
               <input type="checkbox" class="custom-control-input" id="same-address">
@@ -214,7 +222,7 @@
             @if (Cart::instance('default')->count() == 0)
 
             @else
-            <button class="btn btn-dark rounded-pill py-2 btn-block" type="submit">PLACE THE ORDER</button>
+            <button class="btn rounded-pill py-2 btn-block" type="submit">PLACE THE ORDER</button>
             @endif
 
           </form>

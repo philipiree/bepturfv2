@@ -91,6 +91,6 @@ class ContactUsController extends Controller
         $messages = Contact::findOrFail($id);
         $messages->delete();
         alert()->success('Done!','Successfully Deleted the Message');
-        return redirect('/messages');
+        return redirect('/inqueries');
     }
 }

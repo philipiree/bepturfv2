@@ -38,7 +38,7 @@
                         <td>{{$expense->id}}</td>
                         <td>{{$expense->name}}</td>
                         <td>{{$expense->entry_date}}</td>
-                        <td>{{$expense->amount}}</td>
+                        <td>₱{{ number_format($expense->amount,2)}}</td>
                         <td>{{$expense->description}}</td>
                         <td><a href="/expenses-view/{{ $expense->id}}" class="btn btn-info">View</a></td>
                         <td><a href="/expenses/{{ $expense->id}}" class="btn btn-success">EDIT</a></td>

@@ -30,48 +30,30 @@ class DashboardController extends Controller
         $order = Order::all();
         $blogs = Blog::orderBy('created_at', 'desc')->paginate(5);
         $contacts = Contact::orderBy('created_at', 'desc')->paginate(5);
-
         $users = User::all();
-        // $from = Carbon::now()->month;
 
-        //today
         $from = Carbon::parse(sprintf(
             '%s-01-01',
             Carbon::today(),
         ));
+
         $to = clone $from;
         $to->day = $to->daysInMonth;
         $expenses = Order::whereBetween('created_at', [$from, $to]);
         $expensesTotal = number_format($expenses->sum('billing_total'),2);
         $totals = DB::table('order_product')->sum('quantity');
 
+        //Today
+        $today = Order::whereDate('created_at', '=', Carbon::today());
+        $cToday = $today->sum('billing_total');
         //Yesterday
-        $fromYesterday = Carbon::parse(sprintf(
-            '%s-01-01',
-            Carbon::now()->subDays(2),
-        ));
-        $Two = clone $fromYesterday;
-        $Two->day = $Two->daysInMonth;
-        //Two Days Ago
-        $twoDays = Carbon::parse(sprintf(
-            '%s-01-01',
-            Carbon::today()->subDays(2),
-        ));
-        $twoDaysAgo = clone $twoDays;
-        $twoDaysAgo->day = $twoDays->daysInMonth;
+        $yesterday = Order::whereDate('created_at', '=', Carbon::yesterday());
+        $cYesterday = $yesterday->sum('billing_total');
+        //Two days ago
+        $twoDays = Order::whereDate('created_at', '=', Carbon::today()->subDay(2));
+        $cTwoDays = $twoDays->sum('billing_total');
 
-        //Chart
-
-        $cToday = $expenses->sum('billing_total');
-        //Yesterday Total
-        $expensesOne = Order::whereBetween('created_at', [$fromYesterday, $Two]);
-        $cYesterday = $expensesOne->sum('billing_total');
-
-        //Two Days ago Total
-        $expensesTwo = Order::whereBetween('created_at', [$twoDays, $twoDaysAgo]);
-        $cTwoDaysAgo = $expensesTwo->sum('billing_total');
-        //cToday = 1,250, cTwodaysAgo = 2,500, cYesterday
-
+        //Charts
         $borderColors = [
             "rgba(255, 99, 132, 1.0)",
             "rgba(22,160,133, 1.0)",
@@ -82,8 +64,6 @@ class DashboardController extends Controller
             "rgba(255, 99, 132, 0.2)",
             "rgba(22,160,133, 0.2)",
             "rgba(255, 205, 86, 0.2)",
-
-
         ];
 
         $salesChart = LarapexChart::setType('bar')
@@ -94,7 +74,7 @@ class DashboardController extends Controller
         ->setDataset([
             [
                 'name'  => 'Two Days Ago',
-                'data'  =>  [$cTwoDaysAgo]
+                'data'  =>  [$cTwoDays]
             ],
             [
                 'name'  => 'Yesterday',
@@ -120,7 +100,7 @@ class DashboardController extends Controller
             'contacts' => $contacts,
             'salesChart' => $salesChart,
             ]);
-    }
+        }
 
     /**
      * Show the form for creating a new resource.

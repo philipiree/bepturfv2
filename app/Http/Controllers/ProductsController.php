@@ -53,10 +53,10 @@ class ProductsController extends Controller
             'maker' => 'required',
             'flavor' => 'required',
             'description' => 'required',
-            'price' => 'required',
+            'price' => 'required|numeric|min:1',
             'size' => 'required',
             'strength' => 'required',
-            'quantity' => 'required',
+            'quantity' => 'required|numeric|min:0',
             'display_image' => 'image|nullable|max:1999'
         ]);
 

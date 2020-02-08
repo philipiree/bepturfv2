@@ -76,7 +76,7 @@
               <a href="/collections/{{ $product->id }}"><img class="card-img-top" src="/storage/display_images/{{ $product->display_image }}" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a class="product_display"href="/collections/{{ $product->id}}">{{ $product->name }}</a>
+                  <a class="product_display" href="/collections/{{ $product->id}}">{{ $product->name }}</a>
                   <p class="descp">{{ $product->flavor }}</p>
                   <p class="makerdesc">{{ $product->maker }}</p>
                   <h5 class="pricetag">₱{{ $product->price }}</h5>

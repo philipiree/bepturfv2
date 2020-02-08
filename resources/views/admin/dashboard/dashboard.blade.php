@@ -175,7 +175,7 @@
                     <img src="/storage/display_images/{{ $product->display_image }}" alt="" width="40" class="img-fluid rounded shadow-sm">
                   </div>
                   <div class="product-info">
-                    <a href="javascript:void(0)" class="product-title">{{ $product->name }}
+                    <a href={{ route('pages.display', $product->id) }} class="product-title">{{ $product->name }}
                     <span class="badge badge-warning float-right">{{ $product->price}}</span></a>
                     <span class="product-description">
                      {{$product->description}}
@@ -288,7 +288,7 @@
             </div>
             <!-- /.card-body -->
             <div class="card-footer text-center">
-              <a href="/messages" class="uppercase">View All Inqueries</a>
+              <a href="/inqueries" class="uppercase">View All Inqueries</a>
             </div>
             <!-- /.card-footer -->
           </div>
@@ -299,6 +299,8 @@
 
         <!-- /.row -->
         <!-- /.card -->
+        <script src="{{ $salesChart->cdn() }}"></script>
+        {!! $salesChart->script() !!}
       </div>
 
   </div><!--/. container-fluid -->

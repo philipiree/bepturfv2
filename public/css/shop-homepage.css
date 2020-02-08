@@ -6,16 +6,19 @@
 
 /* font-family: 'Roboto', sans-serif; */
 
-h6,h1,h2,h3,h4,h5,h6,a{
+h6,h1,h2,h3,h4,h5,h6,a, label{
     font-family: 'Roboto', sans-serif;
+    color: orange;
 }
 
 a, a:hover {
-  color: orange;
+  color: black;
 }
+
 
 .product_display{
     font-size: 20px;
+    color: orange;
 }
 
 .descp{
@@ -30,6 +33,7 @@ a, a:hover {
     color: grey;
      text-transform: uppercase;
     margin-top: 13px;
+
 }
 
 .pricetag{
@@ -51,7 +55,20 @@ a, a:hover {
     margin-left: 8em;
 }
 
+.nav-link{
+    font-size: 19px;
+}
 
+.navbar{
+   background-color: orange;
+}
+.nav-link{
+    color:white;
+}
+
+.link{
+    color: orange;
+}
 
 
 

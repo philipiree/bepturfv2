@@ -43,7 +43,7 @@ class ExpensesController extends Controller
         $this->validate($request, [
             'name' => 'required',
             'date' => 'required',
-            'amount' => 'required',
+            'amount' => 'required|numeric|min:0',
             'description' => 'required',
         ]);
 
@@ -97,7 +97,7 @@ class ExpensesController extends Controller
         $this->validate($request, [
             'name' => 'required',
             'date' => 'required',
-            'amount' => 'required',
+            'amount' => 'required|integer|min:0',
             'description' => 'required',
         ]);
 

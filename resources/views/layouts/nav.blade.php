@@ -29,16 +29,16 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg">
     <div class="container">
-      <a class="navbar-brand" href="/">Vape Turf</a>
+      <a class="navbar-brand" href="/"><img src="../itemspic/vapeturflogo.png" alt=""></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item {{ 'home' == request()->path() ? 'active' : '' }}">
-            <a class="nav-link" href="/home">Home
+            <a class="nav-link" href="/collections">Home
             </a>
           </li>
           <li class="nav-item dropdown">
@@ -76,7 +76,7 @@
                 <div class="input-group">
                 <input type="text" name="query" value="{{ request()->input('query')}}" class="form-control" placeholder="Search">
                   <div class="input-group-append">
-                    <button type="submit" class="btn btn-default"><img src="../itemspic/search.png" alt=""></i></button>
+                    <button type="submit" class="btn"><img src="../itemspic/search.png" alt=""></i></button>
                   </div>
                 </div>
               </form>
@@ -137,15 +137,15 @@
         <div class="row ">
             <div class="col-md-4">
                 <div class="col-sm links">
-                    <a href="/terms-of-service">Terms & Service</a>
-                    <br>
-                   <a href="/terms-services">Contact Us</a>
-                   <br>
-                    <a href="/terms-services">About Us</a>
+                    <a  class="link" href="/terms-of-service">Terms & Service</a>
+                <br>
+                    <a  class="link" href="/contact-us">Contact Us</a>
+                <br>
+                    <a class="link" href="/about-us">About Us</a>
                 </div>
             </div>
             <div class="col-md-4">
-                <p class="m-0 text-center text-white">Copyright &copy; VapeTurf 2019</p>
+                <p class="m-0 text-center text-white">Copyright &copy; VapeTurf 2020</p>
             </div>
             <div class="col-md-4 links2">
                 <div class="col-sm inline">

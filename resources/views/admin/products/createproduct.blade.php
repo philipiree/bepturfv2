@@ -4,12 +4,12 @@
 @section('title')
     Create Product
 @endsection
-
-
 @section('content')
+
  <div class="container-fluid">
      <div class="row">
          <div class="col-md-10 mx-auto">
+            @include('inc.messages')
              <div class="card">
                  <div class="card-header text-center">
                      <h1>Create Product</h1>

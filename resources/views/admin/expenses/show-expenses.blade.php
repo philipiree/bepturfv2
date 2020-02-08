@@ -31,12 +31,11 @@
                         </tr>
                     </thead>
                 <tbody>
-
                     <tr>
                         <td class="text-center">{{$expense->id}}</td>
                         <td>{{$expense->name}}</td>
                         <td>{{$expense->entry_date}}</td>
-                        <td>{{$expense->amount}}</td>
+                        <td>₱{{ number_format($expense->amount,2) }}</td>
                         <td>{{$expense->description}}</td>
                     </tr>
                 </tbody>

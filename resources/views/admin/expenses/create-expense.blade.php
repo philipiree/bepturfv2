@@ -7,6 +7,7 @@
 
 
 @section('content')
+@include('inc.messages')
  <div class="container-fluid">
      <div class="row">
          <div class="col-md-10 mx-auto">
@@ -49,6 +50,12 @@
 @endsection
 
 @section('scripts')
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.4.5/jquery-ui-timepicker-addon.min.js"></script>
+<script>
+    $('.date').datepicker({
+        autoclose: true,
+        dateFormat: "{{ config('panel.date_format_js') }}"
+      })
+</script>
 @endsection
 

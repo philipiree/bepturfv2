@@ -49,24 +49,24 @@
                 <table class="table table-bordered table-striped">
                     <tr>
                         <th>Expense Name</th>
+                        <th>Date</th>
                         <th>Amount</th>
                     </tr>
-                    @foreach($expensesSummary as $inc)
+                    @foreach($groupedExpenses as $inc)
                         <tr>
-                            <td>{{ $inc['name'] }}</td>
-                            <td>{{ number_format($inc['amount'], 2) }}</td>
+                            <td>{{ $inc->name }}</td>
+                            <td>{{ $inc->entry_date }} </td>
+                            <td>₱{{ number_format($inc['amount'], 2) }}</td>
                         </tr>
                     @endforeach
                     <tr class="table-info">
                         <th>Total Expenses</th>
-                        <th>{{ number_format($expensesTotal, 2) }}</th>
+                        <th></th>
+                        <th>₱{{ number_format($expensesTotal, 2) }}</th>
                     </tr>
                 </table>
             </div>
         </div>
-
-
-
     </div>
 </div>
 @endsection

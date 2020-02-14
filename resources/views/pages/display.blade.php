@@ -7,7 +7,8 @@
 @section('styles')
 <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 <link href="{{ asset('css/itemdisplay.css') }}" rel="stylesheet">
-<link href="css/shop-homepage.css" rel="stylesheet">
+<link href="{{ asset('css/shop-homepage.css') }}" rel="stylesheet">
+{{-- <link href="css/shop-homepage.css" rel="stylesheet"> --}}
 @endsection
 
 @section('content')
@@ -40,7 +41,7 @@
                 <div class="preview-pic tab-content">
                     <div class="tab-pane active" id="pic-1"><img src="/storage/display_images/{{ $product->display_image }}"/>
                     </div>
-                    <div class="text-center"><h6 style="color: green;">Available Stocks: {{ $product->quantity }}</h6></div>
+                    <div class="stocks"><h6 style="color: green;">Available Stocks: {{ $product->quantity }}</h6></div>
                 </div>
             </div>
             <div style="margin-top: 100px" class="details col-md-6">

@@ -2,7 +2,7 @@
 
 
 @section('title')
-    Dashboard
+    Announcement
 @endsection
 
 
@@ -46,7 +46,7 @@
                         <td class="align-middle">
                             <a href={{ route('pages.display', $blog->id) }}> {{ $blog->title }}</a>
                         </td>
-                        <td class="align-middle">{{ $blog->created_at }}</td>
+                        <td class="align-middle">{{ $blog-> created_at }}</td>
                         <td class="align-middle"><a href="/posts-edit/{{ $blog->id}}" class="btn btn-success">EDIT</a></td>
                         <td class="align-middle">
                             <a href="javascript:;" data-toggle="modal" onclick="deleteData({{$blog->id}})"

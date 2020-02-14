@@ -68,11 +68,13 @@ Route::group(['middleware' => ['auth','admin']], function () {
     Route::resource('monthly-reports', 'MonthlyReportsController');
 
     //Blog routes
-    Route::resource('/posts', 'BlogsController');
+
     Route::get('/posts-edit/{id}','BlogsController@edit');
     Route::get('/posts-create', 'BlogsController@create')->name('blog.create');
     Route::delete('/posts-delete/{id}','BlogsController@destroy')->name('post.destroy');
+    Route::resource('/posts', 'BlogsController');
 
+    //Inqueries routes
     Route::get('/inqueries', 'ContactUsController@index');
     Route::delete('/inqueries/{id}','ContactUsController@destroy')->name('message.destroy');
     Route::get('/inqueries/{id}', 'ContactUsController@show');
@@ -101,8 +103,10 @@ Route::group(['middleware' => ['auth','admin']], function () {
     Route::get('/search', 'CheckoutController@search')->name('search');
 
     /**Blog Controllers */
+    Route::get('/events/{id}', 'AnnouncementsController@eventShow')->name('blogs.show');
     Route::get('/events', 'BlogsController@view')->name('blogs.index');
-    Route::get('/events/{id}', 'BlogsController@eventShow')->name('blogs.show');
+
+
 
     /**Links Controller */
     //Terms of Service Page
@@ -116,3 +120,7 @@ Route::group(['middleware' => ['auth','admin']], function () {
 
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

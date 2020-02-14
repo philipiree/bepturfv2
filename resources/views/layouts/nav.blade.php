@@ -20,7 +20,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
   <script src="https://kit.fontawesome.com/81abfe277e.js" crossorigin="anonymous"></script>
   <!-- Custom styles for this template -->
-  <link href="css/shop-homepage.css" rel="stylesheet">
+  {{-- <link href="../assets/css/shop-homepage.css" rel="stylesheet"> --}}
+  <link href="{{ asset('css/shop-homepage.css') }}" rel="stylesheet">
     @yield('styles')
 
 

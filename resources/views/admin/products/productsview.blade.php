@@ -23,7 +23,8 @@
                         <tr class="inline-block">
                             <th class="text-center">Id</th>
                             <th>Image</th>
-                            <th>Quantity</th>
+                            <th>Qty</th>
+                            <th>Price</th>
                             <th>Name</th>
                             <th>Date</th>
                             <th>Edit</th>
@@ -46,6 +47,7 @@
                         <td class="align-middle">
                             {{ $product->quantity }}
                         </td>
+                        <td class="align-middle"> ₱{{ $product->price }} </td>
                         <td class="align-middle">
                             <a href={{ route('pages.display', $product->id) }}> {{ $product->name }}</a>
                         </td>

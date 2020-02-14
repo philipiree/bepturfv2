@@ -15,7 +15,6 @@ a, a:hover {
   color: black;
 }
 
-
 .product_display{
     font-size: 20px;
     color: orange;
@@ -70,5 +69,16 @@ a, a:hover {
     color: orange;
 }
 
+.profile{
+    color: black;
+}
+
+.messages{
+    color:black;
+}
+
+.edit{
+    color:black;
+}
 
 

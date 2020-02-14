@@ -1,25 +1,20 @@
 @extends('layouts.nav')
 
 @section('title')
-    Products Preview
+    Announcements
 @endsection
 
-@section('styles')
+
 
 <link href="{{ asset('css/blog-home.css') }}" rel="stylesheet">
-@endsection
 
+<link href="{{ asset('css/shop-homepage.css') }}" rel="stylesheet">
 @section('content')
   <!-- Navigation -->
-
-
   <!-- Page Content -->
   <div class="container">
     <div class="row">
       <!-- Blog Entries Column -->
-
-
-
       <div class="col-md-9 py-5 mx-auto">
         <h1 class="mx-auto text-center">Events</h1>
         <!-- Blog Post -->
@@ -41,7 +36,7 @@
             <a href="/events/{{ $blog->id}}" class="btn">Read More &rarr;</a>
           </div>
           <div class="card-footer text-muted">
-            <p>Posted on {{ Carbon\Carbon::parse($blog->created_at)->format(' D M i Y ') }}</p>
+            <p>Posted on {{ Carbon\Carbon::parse($blog->created_at)->format(' D M d, Y ') }}</p>
           </div>
         </div>
         @endforeach

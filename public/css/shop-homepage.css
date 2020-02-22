@@ -81,4 +81,16 @@ a, a:hover {
     color:black;
 }
 
+.warning{
+    border: 3px;
+    border-color: grey;
+    font-weight: bold;
+    color:grey;
+    border-style: solid;
+    padding:5px;
+    margin:0;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
 

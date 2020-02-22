@@ -30,6 +30,10 @@
 <body>
 
   <!-- Navigation -->
+
+    {{-- <img src="../itemspic/nicotine.jpg" alt=""> --}}
+    <p class="warning">WARNING: This Product contains nicotine. Nicotine is an addictive chemical.</p>
+
   <nav class="navbar navbar-expand-lg">
     <div class="container">
       <a class="navbar-brand" href="/"><img src="../itemspic/vapeturflogo.png" alt=""></a>
@@ -52,6 +56,9 @@
                 <a class="dropdown-item" href="{{ route('pages.collections', ['category' => $category->name]) }}">{{ $category->name }}</a>
                 @endforeach
             </div>
+            {{-- <li class="nav-item">
+                <a class="nav-link" href="/contact-us">Batteries</a>
+            </li> --}}
         </li>
           <li class="nav-item {{ 'events' == request()->path() ? 'active' : '' }}">
             <a class="nav-link" href="/events">Events</a>

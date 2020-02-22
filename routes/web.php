@@ -106,8 +106,6 @@ Route::group(['middleware' => ['auth','admin']], function () {
     Route::get('/events/{id}', 'AnnouncementsController@eventShow')->name('blogs.show');
     Route::get('/events', 'BlogsController@view')->name('blogs.index');
 
-
-
     /**Links Controller */
     //Terms of Service Page
     Route::get('/terms-of-service', 'LinksController@terms');
@@ -117,10 +115,6 @@ Route::group(['middleware' => ['auth','admin']], function () {
     //Services Page
     Route::get('/services', 'ServicesController@index');
 
+    Auth::routes();
 
-
-
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/home', 'HomeController@index')->name('home');

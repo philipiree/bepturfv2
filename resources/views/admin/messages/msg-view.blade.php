@@ -46,7 +46,7 @@
 
         </div>
         <div>
-            <a href="/messages" class="btn btn-default mx-auto">Go back to list</a>
+            <a href="/inqueries" class="btn btn-default mx-auto">Go back to list</a>
         </div>
     </div>
             </div>

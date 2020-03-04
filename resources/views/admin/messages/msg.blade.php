@@ -42,7 +42,7 @@
                             {{ Str::limit($contact->description, 50) }}
                         </td>
                         <td class="align-middle">{{ Carbon\Carbon::parse($contact->created_at)->format(' D M i Y ') }}</td>
-                        <td><a href="/messages/{{ $contact->id}}" class="btn btn-info">View</a></td>
+                        <td><a href="/inqueries/{{ $contact->id}}" class="btn btn-info">View</a></td>
                         <td class="align-middle">
                             <a href="javascript:;" data-toggle="modal" onclick="deleteData({{$contact->id}})"
                             data-target="#DeleteModal" class="btn btn-danger btn-mini">DELETE </a>

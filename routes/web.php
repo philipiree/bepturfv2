@@ -17,8 +17,6 @@ use Gloudemans\Shoppingcart\Facades\Cart;
 
 
 Route::get('/', function () {
-
-
     return view('welcome');
 });
 
@@ -57,6 +55,7 @@ Route::group(['middleware' => ['auth','admin']], function () {
     //order routes
     Route::get('/orders', 'OrdersController@index');
     Route::get('/orders-edit/{id}','OrdersController@edit');
+    Route::get('/order-details/{id}','OrdersController@show');
 
     //expense routes
     Route::get('/expenses', 'ExpensesController@index');

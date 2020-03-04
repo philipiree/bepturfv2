@@ -146,9 +146,10 @@ class BlogsController extends Controller
         $blogs = Blog::find($id);
         $blogs->title = $request->input('title');
         $blogs->description = $request->input('description');
-        $blogs->display_image = $fileNameToStore;
 
-
+        if($request->hasFile('display_image')){
+            $blogs->display_image = $fileNameToStore;
+        }
 
         $blogs->save();
         alert()->success('Done!','Successfully Edited Product');

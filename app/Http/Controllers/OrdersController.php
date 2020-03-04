@@ -47,7 +47,13 @@ class OrdersController extends Controller
      */
     public function show($id)
     {
-        //
+        $orders = Order::find($id);
+        $products = $orders->products;
+
+        return view('admin.orders.details')->with([
+            'products' => $products,
+            'orders' => $orders,
+        ]);
     }
 
     /**
@@ -58,7 +64,7 @@ class OrdersController extends Controller
      */
     public function edit($id)
     {
-        $orders = Orders::find($id);
+        $orders = Order::find($id);
         return view('admin.orders.editorders')->with('orders', $orders);
     }
 

@@ -24,32 +24,32 @@
                         <h5 class="mb-3">User Profile</h5>
                         <div class="row">
                             <div class="col-md-6">
-                                @foreach ($users as $user)
+
                                 <h6>Name</h6>
                                 <p>
-                                    {{ $user->name }} {{$user->lastname}}
+
                                 </p>
                                 <h6>Email</h6>
                                 <p>
-                                    {{ $user->email }}
+
                                 </p>
                                 <h6>Address</h6>
                                 <p>
-                                    {{ $user->address }}
+
                                 </p>
                                 <h6>City</h6>
                                 <p>
-                                    {{ $user->city }}
+
                                 </p>
                                 <h6>Province</h6>
                                 <p>
-                                    {{ $user->province }}
+
                                 </p>
                                 <h6>Zip Code</h6>
                                 <p>
-                                   {{ $user->zip_code }}
+
                                 </p>
-                                @endforeach
+
                             </div>
                             <div class="col-md-6">
                                 <h5 class="mt-2"><span class="fa fa-clock-o ion-clock float-right"></span> Recent Activity</h5>
@@ -99,40 +99,40 @@
                             <div class="form-group row">
                                 <label class="col-lg-3 col-form-label form-control-label">First name</label>
                                 <div class="col-lg-9">
-                                    <input class="form-control" type="text" value="{{ $user->name }}">
+                                    <input class="form-control" type="text" value="">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-lg-3 col-form-label form-control-label">Last name</label>
                                 <div class="col-lg-9">
-                                    <input class="form-control" type="text" value="{{ $user->lastname }}">
+                                    <input class="form-control" type="text" value="">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-lg-3 col-form-label form-control-label">Email</label>
                                 <div class="col-lg-9">
-                                    <input class="form-control" type="email" value="{{ $user->email }}">
+                                    <input class="form-control" type="email" value="">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-lg-3 col-form-label form-control-label">Address</label>
                                 <div class="col-lg-9">
-                                <input class="form-control" type="url" value="{{ $user->address }}">
+                                <input class="form-control" type="url" value="">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-lg-3 col-form-label form-control-label">City</label>
                                 <div class="col-lg-3">
-                                    <input class="form-control" type="text" value=" {{ $user->city }} ">
+                                    <input class="form-control" type="text" value=" ">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-lg-3 col-form-label form-control-label">Province</label>
                                 <div class="col-lg-3">
-                                    <input class="form-control" type="text" value="{{ $user->province }}">
+                                    <input class="form-control" type="text" value="">
                                 </div>
                                 <div class="col-lg-3">
-                                    <input class="form-control" type="text" value=" {{ $user->zip_code }} " placeholder="Zip">
+                                    <input class="form-control" type="text" value="" placeholder="Zip">
                                 </div>
                             </div>
                             @endforeach

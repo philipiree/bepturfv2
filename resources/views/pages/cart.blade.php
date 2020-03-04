@@ -10,6 +10,7 @@
 @endsection
 
 @section('content')
+
 <div class="px-4 px-lg-0">
    <div class="container">
         <div class="row">

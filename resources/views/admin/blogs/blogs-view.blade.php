@@ -44,7 +44,7 @@
                         </td>
 
                         <td class="align-middle">
-                            <a href={{ route('pages.display', $blog->id) }}> {{ $blog->title }}</a>
+                            <a href={{ route('blogs.show', $blog->id) }}> {{ $blog->title }}</a>
                         </td>
                         <td class="align-middle">{{ $blog-> created_at }}</td>
                         <td class="align-middle"><a href="/posts-edit/{{ $blog->id}}" class="btn btn-success">EDIT</a></td>

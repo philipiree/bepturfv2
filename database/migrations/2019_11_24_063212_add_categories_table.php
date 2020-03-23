@@ -49,7 +49,5 @@ class AddCategoriesTable extends Migration
     {
         Schema::dropIfExists('category_product');
         Schema::dropIfExists('categories');
-
-
     }
 }

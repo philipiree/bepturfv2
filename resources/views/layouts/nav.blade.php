@@ -123,7 +123,7 @@
                     </form>
                     <a class="dropdown-item" href="{{ route('home') }}">
 
-                        {{ __('Profile') }}
+                        {{ __('Profile') }}o
                     </a>
                 </div>
             </li>

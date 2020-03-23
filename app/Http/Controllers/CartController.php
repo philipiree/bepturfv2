@@ -86,10 +86,6 @@ class CartController extends Controller
 
             return redirect()->route('cart.index');
         }
-
-
-
-
     }
 
     /**
@@ -140,7 +136,7 @@ class CartController extends Controller
             toast('Cart Updated','success');
             return back();
         }else{
-            toast('Exceeding Quantity of Available stucls','warning');
+            toast('Exceeding Quantity of Available stocks','warning');
             return back();
         }
 

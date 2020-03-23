@@ -12,13 +12,13 @@
 @endsection
 
 @section('content')
-<div class="container">
+{{-- <div class="container">
     @if(session()->has('success_message'))
     <div class="alert alert-success">
         {{ session()->get('success_message') }}
     </div>
     @endif
-    @if(count($errors) > 0)
+    @if(count(array($errors)) > 0)
     <div class="alert alert-danger">
         <ul>
             @foreach ($errors->all() as $error)
@@ -26,7 +26,25 @@
             @endforeach
         </ul>
     </div>
-    @endif
+@endif --}}
+        <div style="margin-top: 60px;"class="col-md-12">
+            <div class="col-lg-6">
+            @if (session('success'))
+            <div class="alert alert-success" role="alert">
+                {{ session('success') }}
+            </div>
+            @endif
+            @if (session('errors'))
+                <div class="alert alert-danger" role="alert">
+                    {{ session('errors') }}
+                </div>
+            @endif
+            @if (session('update'))
+                <div class="alert alert-info" role="alert">
+                    {{ session('update') }}
+                </div>
+            @endif
+            </div>
     </div>
     <div class="row">
 
